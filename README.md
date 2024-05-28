@@ -45,7 +45,7 @@ boolean isJavaFun = true;
 # Primitive Data Types 
 -Primitive data types are the most basic data types available in a programming language. 
 -They serve as the building blocks for data manipulation in programs. In Java, there are eight primitive data types, each of which represents a different kind of data.
-Summary Table
+## Summary Table
 Data Type	Size	Range	Default Value
 byte	8 bits	-128 to 127	0
 short	16 bits	-32,768 to 32,767	0
@@ -55,4 +55,86 @@ float	32 bits	Approximately 1.4e-45 to 3.4e+38	0.0f
 double	64 bits	Approximately 4.9e-324 to 1.8e+308	0.0d
 boolean	1 bit*	true or false	false
 char	16 bits	'\u0000' (0) to '\uffff' (65,535)	'\u0000'
+# Local Variable Type Inference
+-Local Variable Type Inference (LVT) is a feature introduced in Java 10 that allows the compiler to infer the type of local variables automatically, making the code more concise and readable. 
+-This feature uses the var keyword to let the compiler determine the type based on the assigned value
+## Declaration and Initialization:
+-When you declare a local variable and initialize it at the same time, you can use the var keyword.
+-The compiler infers the type of the variable from the type of the expression on the right-hand side of the assignment.
+## Rules and Restrictions:
+-The variable must be initialized at the time of declaration; you cannot use var without initialization.
+-The inferred type must be a valid, concrete type; it cannot be null or involve wildcard types directly.
+# Variable type interface
+-Variable type inference is a programming language feature that allows the compiler to automatically deduce the type of a -variable at compile time, based on the value assigned to the variable. This feature enhances code readability and conciseness by eliminating the need for explicit type declarations.
+# Naming Variables
+-Naming variables is a crucial aspect of writing clean and understandable code. 
+## Use Descriptive Names
+Choose names that clearly convey the purpose or meaning of the variable.
+Avoid single-letter or ambiguous names like x, y, or temp.
+## Be Consistent
+Maintain consistency in naming style throughout your codebase.
+Choose a naming convention (e.g., camelCase, snake_case, PascalCase) and stick to it.
+## Follow Conventions
+Adhere to the naming conventions of the programming language or framework you're using.
+For example, in Java, variables typically start with a lowercase letter, while classes start with an uppercase letter.
+## Use Intention-Revealing Names
+Opt for names that reveal the intention behind the variable.
+Instead of result, consider totalRevenue or averageScore.
+## Avoid Abbreviations (Except Common Ones)
+Abbreviations can make code harder to understand, especially for newcomers.
+Use full words unless the abbreviation is widely understood (e.g., num for "number").
+## Be Mindful of Scope
+Choose variable names appropriate to their scope (e.g., local variables, instance variables, constants).
+Shorter names may be acceptable for loop counters or temporary variables with limited scope.
+## Use Singular Nouns for Single Values
+Use singular nouns for variables representing single values.
+For example, user, customer, product, etc.
+## Use Plural Nouns for Collections
+Use plural nouns for variables representing collections or arrays.
+For example, users, customers, products, etc.
+## Avoid Reserved Words and Keywords
+Do not use language keywords or reserved words as variable names.
+If a reserved word accurately describes the variable's purpose, consider using a synonym or prefixing/suffixing it.
+## Make Names Pronounceable
+Choose names that are easy to pronounce and understand when read aloud.
+Pronounceability aids in team communication and code review discussions.
+# Modifying Variables
+-Modifying variables involves changing their values during the execution of a program. 
+-Depending on the programming language and the type of variable, there are various ways to modify variables
+## Hard coded variables
+-"Hard-coded variables" refer to values that are explicitly written into the source code rather than being obtained from external sources or calculated dynamically during runtime. 
+-These values are typically literals and are directly embedded into the code.
+## Dynamic variables
+-In dynamically typed languages, variables are not bound to a specific data type at compile time.
+-Instead, their type is determined dynamically at runtime based on the value assigned to them. 
+-This contrasts with statically typed languages, where variable types are explicitly declared and enforced by the compiler.
+# Arithmetic Operators
+-Arithmetic operators are symbols or functions in programming languages used to perform mathematical calculations on numerical values. 
+-These operators allow you to perform basic arithmetic operations like addition, subtraction, multiplication, division, and modulus.
+## Addition +
+Adds two operands.
+Can also be used for string concatenation in some languages
+## Subtraction -
+Subtracts the right operand from the left operand.
+## Multiplication *
+Multiplies two operands.
+## Division /
+Divides the left operand by the right operand.
+## Modulus %
+Returns the remainder of the division of the left operand by the right operand.
+# Decision Structures in Java
+-Decision structures in Java allow you to control the flow of your program based on certain conditions. 
+-Java provides several constructs for decision-making, including if, if-else, if-else-if, switch, and the ternary operator (? :).
+## if Statement:
+The if statement executes a block of code if a specified condition is true. It is the most basic decision-making statement.
+## if-else Statement:
+The if-else statement allows you to execute one block of code if the condition is true and another block of code if the condition is false.
+## if-else-if Statement:
+The if-else-if statement allows you to check multiple conditions and execute different blocks of code based on the first condition that is true.
+## switch Statement:
+The switch statement allows you to select one of many code blocks to be executed based on a given expression. It's useful when you have multiple conditions to check against the same variable.
+## Ternary Operator (? :):
+The ternary operator is a shorthand way of writing an if-else statement. It returns one of two values depending on the value of a Boolean expression.
+
+
 
