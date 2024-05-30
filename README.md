@@ -135,6 +135,141 @@ The if-else-if statement allows you to check multiple conditions and execute dif
 The switch statement allows you to select one of many code blocks to be executed based on a given expression. It's useful when you have multiple conditions to check against the same variable.
 ## Ternary Operator (? :):
 The ternary operator is a shorthand way of writing an if-else statement. It returns one of two values depending on the value of a Boolean expression.
-
-
-
+# Relational Operators
+-Relational operators in Java are used to compare two values or expressions. 
+-The result of a relational operation is always a boolean value: true or false. 
+-These operators are essential in control flow statements such as if, while, and for loops, allowing the program to make decisions and iterate over data based on certain conditions.
+## Equal to (==):
+Compares two values for equality.
+Example: if (a == b)
+Not equal to (!=):
+Compares two values for inequality.
+Example: if (a != b)
+## Greater than (>):
+Checks if the value on the left is greater than the value on the right.
+Example: if (a > b)
+## Less than (<):
+Checks if the value on the left is less than the value on the right.
+Example: if (a < b)
+## Greater than or equal to (>=):
+Checks if the value on the left is greater than or equal to the value on the right.
+Example: if (a >= b)
+## Less than or equal to (<=):
+Checks if the value on the left is less than or equal to the value on the right.
+Example: if (a <= b)
+# Logical Operators 
+-Logical operators in Java are used to combine multiple boolean expressions and return a boolean result. 
+-These operators are particularly useful in control flow statements to create more complex conditions. Java provides three logical operators:
+## Logical AND (&&):
+Returns true if both operands are true.
+Example: if (a && b)
+## Logical OR (||):
+Returns true if at least one of the operands is true.
+Example: if (a || b)
+## Logical NOT (!):
+Inverts the value of its operand.
+Example: if (!a)
+# Short Circuit Logic
+-Short-circuit logic in Java refers to the evaluation behavior of the logical AND (&&) and logical OR (||) operators.
+-In short-circuit evaluation, the second operand is evaluated only if the first operand does not determine the result of the operation. 
+-This can prevent unnecessary computations and avoid potential errors such as null pointer exceptions.
+# Short-Circuit AND (&&)
+-The logical AND (&&) operator uses short-circuit evaluation.
+-If the first operand is false, the overall result is false, and the second operand is not evaluated. This is because the AND operation requires both operands to be true to result in true. 
+-If the first operand is already false, evaluating the second operand is unnecessary.
+# Short-Circuit OR (||)
+The logical OR (||) operator also uses short-circuit evaluation. If the first operand is true, the overall result is true, and the second operand is not evaluated. This is because the OR operation requires only one operand to be true to result in true. If the first operand is already true, evaluating the second operand is unnecessary.
+# Repetition Structures in Java
+-Repetition structures, also known as loops, in Java are used to execute a block of code repeatedly as long as a specified condition is true. Java provides several types of loops to handle different scenarios:
+-while Loop
+-do-while Loop
+-for Loop
+-enhanced for Loop (for-each Loop)
+1. while Loop
+The while loop repeats a block of code as long as a specified condition is true. The condition is checked before the loop body is executed.
+2.do-while Loop
+The do-while loop is similar to the while loop, but it checks the condition after executing the loop body. This ensures that the loop body is executed at least once.
+3. for Loop
+The for loop is used when you know in advance how many times you want to execute a statement or a block of statements. It consists of three parts: initialization, condition, and update.
+4. Enhanced for Loop (for-each Loop)
+The enhanced for loop, also known as the for-each loop, is used to iterate over elements in an array or a collection. It simplifies the syntax and makes the code more readable.
+# Controlling Loop Execution
+-Java provides several statements to control the execution of loops:
+-break Statement: Exits the loop immediately.
+-continue Statement: Skips the current iteration and proceeds with the next iteration.
+-return Statement: Exits the loop and the method in which it is used.
+# Methods in Java
+-Methods in Java are blocks of code that perform specific tasks and can be called upon to execute those tasks whenever needed. 
+-They help in organizing code, making it reusable, and improving readability and maintainability.
+## Types of Methods
+1. Instance Methods
+Instance methods are associated with an instance of a class. They can access instance variables and other instance methods directly.
+2.Static Methods
+Static methods belong to the class rather than an instance. They can be called without creating an instance of the class and can only access static variables and other static methods directly.
+# Method Overloading
+Method overloading allows multiple methods in the same class to have the same name but different parameters (different type, number, or both). This is useful for creating methods that perform similar functions but with different inputs.
+# Pass by Value
+In Java, method parameters are passed by value, meaning that a copy of the actual parameter is passed to the method. Changes to the parameter within the method do not affect the original value.
+# Returning Values
+Methods can return values of any data type, including objects. Use the return statement to return a value from a method.
+# Variable Scope
+Variable scope in Java refers to the region of the program where a variable is accessible. Understanding the scope of variables is crucial for writing correct and maintainable code. In Java, variable scope is categorized into several types based on where and how variables are declared:
+-Local Scope
+-Instance Scope (Fields)
+-Class Scope (Static Fields)
+-Block Scope
+1. Local Scope
+Local variables are declared inside a method, constructor, or block and are only accessible within that specific method, constructor, or block. They are created when the block is entered and destroyed when the block is exited.
+2. Instance Scope (Fields)
+Instance variables, also known as fields, are declared inside a class but outside any method, constructor, or block. They are accessible to all non-static methods and constructors of the class and represent the state of an instance of the class. Each instance of the class has its own copy of instance variables.
+3. Class Scope (Static Fields)
+Static variables, also known as class variables, are declared with the static keyword inside a class but outside any method, constructor, or block. They are shared among all instances of the class and are accessible through the class name as well as instances of the class.
+4. Block Scope
+Block scope refers to variables declared inside any pair of curly braces {} such as loops, if statements, and blocks within methods. These variables are only accessible within that block.
+# Passing Data to Methods
+-In Java, you can pass data to methods through parameters. Methods can accept input in the form of parameters, process the data, and return a result. 
+## Method Parameters
+When defining a method, you specify parameters in the method's signature. These parameters act as placeholders for the actual values (arguments) you pass when calling the method.
+# Returning Data from Methods
+-Returning data from methods in Java involves specifying a return type in the method signature and using the return statement to return a value from the method.
+## Method Return Types
+The return type of a method is specified in the method declaration. It indicates the type of value the method will return. If a method does not return any value, its return type is void.
+# Overloading Methods
+-Method overloading in Java allows a class to have more than one method with the same name, provided their parameter lists are different.
+-Overloading increases the readability of the program by allowing methods that perform similar operations to be called by the same name.
+## Key Points
+-Different Parameter Lists: Methods can be overloaded if they have different parameter lists, which means the number of parameters, the type of parameters, or the order of parameters must differ.
+-Return Type and Access Modifiers: Changing the return type or access modifier alone does not constitute overloading; the parameter list must change.
+-Compile-Time Polymorphism: Method overloading is an example of compile-time polymorphism because the method call is resolved at compile time based on the method signature.
+# Objects in Java
+-In Java, objects are the fundamental building blocks for creating complex applications.
+-An object is an instance of a class, which is a blueprint defining the data and behavior (methods) the object will have. Understanding objects is crucial for mastering object-oriented programming (OOP) in Java.
+## Key Concepts
+-Class: A blueprint for creating objects. It defines fields (attributes) and methods (behaviors) that the objects created from the class will have.
+-Object: An instance of a class. It is created from a class and can have state and behavior as defined by the class.
+-Instantiation: The process of creating an object from a class.
+## Defining a Class
+A class is defined using the class keyword. 
+## Creating an Object
+To create an object, you use the new keyword followed by the class constructor.
+# Java Constructors
+Constructors are special methods used to initialize objects. They have the same name as the class and do not have a return type.
+## Object State and Behavior
+State: Represented by the fields (attributes) of the object. Each object has its own set of values for these fields.
+Behavior: Represented by the methods (functions) of the object. Methods define what operations can be performed on the object’s data.
+## Encapsulation
+Encapsulation is an OOP principle where the data (fields) and code (methods) that manipulates the data are bundled together. It restricts direct access to some of the object's components, which is achieved using access modifiers.
+# Method Parameters as Objects
+-In Java, method parameters can be of primitive types or objects. When you pass an object as a parameter to a method, you are actually passing a reference to the object, not a copy of the object itself.
+-This means any changes made to the object inside the method will affect the original object outside the method. 
+# Method Return Types
+-In Java, methods can have different return types, including primitive types, objects, arrays, or even void. The return type of a method determines what type of data it can return to the caller. 
+# Wrapper Classes
+Wrapper classes in Java provide a way to treat primitive data types as objects. Each primitive data type has a corresponding wrapper class in Java, which allows you to perform operations on them like objects.
+Wrapper classes are useful when working with collections, generics, or methods that require objects instead of primitives.
+## Converting Primitive Types to Wrapper Objects
+You can create wrapper objects using constructors or static methods provided by the wrapper classes.
+## Converting Wrapper Objects to Primitive Types
+You can extract the primitive value from wrapper objects using methods provided by the wrapper classes.
+# Records
+Records are a new feature introduced in Java starting from version 14. They provide a concise syntax for declaring classes that are meant to be simple data carriers. Records can help reduce boilerplate code in Java by automatically generating standard methods such as constructors, accessors, equals(), hashCode(), and toString().
