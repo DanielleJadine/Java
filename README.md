@@ -272,4 +272,39 @@ You can create wrapper objects using constructors or static methods provided by 
 ## Converting Wrapper Objects to Primitive Types
 You can extract the primitive value from wrapper objects using methods provided by the wrapper classes.
 # Records
-Records are a new feature introduced in Java starting from version 14. They provide a concise syntax for declaring classes that are meant to be simple data carriers. Records can help reduce boilerplate code in Java by automatically generating standard methods such as constructors, accessors, equals(), hashCode(), and toString().
+Records are a new feature introduced in Java starting from version 14. They provide a concise syntax for declaring classes that are meant to be simple data carriers. Records can help reduce boilerplate code in 
+Java by automatically generating standard methods such as constructors, accessors, equals(), hashCode(), and toString().
+# Inheritance
+-Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit properties and behaviors (fields and methods) from another class.
+-In Java, inheritance is achieved using the extends keyword.
+## Superclass and Subclass:
+-Superclass: The class whose properties and methods are inherited.
+-Subclass: The class that inherits from the superclass.
+## Types of Inheritance
+-Single Inheritance: A class can inherit from only one superclass.
+-Multilevel Inheritance: A class can inherit from a superclass, and another class can inherit from this subclass, forming a chain.
+-Hierarchical Inheritance: Multiple classes inherit from a single superclass.
+## Constructors in Inheritance:
+-The constructor of the superclass is called when an object of the subclass is created.
+-You can call the superclass constructor explicitly using super().
+## Method Overriding:
+-A subclass can provide a specific implementation of a method that is already defined in its superclass.
+## Access Modifiers:
+-public, protected, and private keywords control the visibility of fields and methods in the superclass to the subclass.
+## Chain of Inheritance
+-Chain of inheritance, also known as multilevel inheritance, is a type of inheritance in which a class is derived from another derived class.
+-This forms a hierarchy where each class inherits from the preceding class, creating a chain of classes.
+-In Java, this is accomplished by having a subclass extend a superclass, and then another subclass extend that subclass, and so on.
+## Limiting Access in Inheritance
+-Limiting access in inheritance is crucial to maintaining encapsulation and ensuring that only necessary parts of a class's implementation are exposed to other classes, including subclasses.
+-Java provides several mechanisms to control the access of fields, methods, and constructors through access modifiers.
+## Sealed Classes
+-Sealed classes are a feature introduced in Java 17 to provide more control over the inheritance hierarchy of classes. 
+-They allow you to define a class and explicitly specify which classes are permitted to extend it. 
+-This helps in creating a more predictable and controlled inheritance structure, improving the safety and maintainability of the code.
+## Sealed Class: A class that restricts which other classes can inherit from it.
+## Permitted Subclasses: The specific classes that are allowed to extend the sealed class.
+# Polymorphism
+-Polymorphism is one of the core concepts of object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass.
+-It enables a single interface to be used for different underlying data types. 
+-Polymorphism can be achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).
