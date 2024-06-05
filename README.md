@@ -308,3 +308,48 @@ Java by automatically generating standard methods such as constructors, accessor
 -Polymorphism is one of the core concepts of object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass.
 -It enables a single interface to be used for different underlying data types. 
 -Polymorphism can be achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).
+# Object Type Casting
+-Type casting is when you transform an object's type, either explicitly or implicitly. 
+-Imagine we have these classes: Dog and Cat, both stemming from Animal. Now, you create an object that is technically of the superclass, but you make it wear the hat of a subclass. This is what we call an implicit upcast.
+-With an implicit upcast, the object only knows about the methods of the class it was casted up to. 
+-Even though it is a dog underneath, it thinks it is just an Animal. It cannot do dog-specific things like fetching sticks. To unleash those special tricks, we have to explicitly down cast it back to a Dog.
+-Bottom line is that you only use type casting when it is absolutely necessary. And when you do, double-check the code to avoid these casting mishaps
+# Instanceof Operator 
+-Java has this neat operator called "instanceof" which helps you check if an object belongs to a specific class. Imagine we have an "animal" superclass, with "dog" and "cat" subclasses. 
+-"Instanceof" is handy for safely figuring out what an object is. In this case, we not only check if Sasha is a dog but also cast Sasha as a dog and store it as "sashathedog". It is like a two-in-one move that does checking and transforming, and is called pattern matching.
+# Abstraction
+-Abstraction, in the world of object-oriented programming, is like having an idea that is not quite ready to be conceptualized yet. In Java, there is an "abstract" that can be added to classes and methods. It is like a sign that says this is a template, and not for direct use.
+-The abstract class is more of a blueprint than something you can actually use. Think of it as a general concept, but it is too vague to be real or tangible. You cannot make an actual "shape" from it, but it is there to guide more specific shapes.
+-Then there are abstract methods, which are even more abstract. They are like a method, but do not have any instructions inside. It is up to the subclasses to fill in the details. 
+-When you are defining an abstract method in Java, you use the word "abstract" followed by the return type and method name. That is it — no curly braces, no body. 
+-In a nutshell, abstraction in Java is like having a rough idea, creating a blueprint for it (the abstract class), and leaving parts for the specialized versions (the subclasses) to fill in. It is a way to set the rules and expectations for related concepts in your code.
+# Inheriting From Abstract Classes
+-An abstract class is like a blueprint for other classes. Take this rectangle class, for example. It extends the abstract class Shape. We get a compilation error saying this class needs to be declared abstract or implement the abstract method called "calculate area" from Shape.
+-This means the rectangle class inherits this abstract method when it extends Shape. It is similar to passing the baton of responsibility. Now, it is up to you to either implement this method or declare the rectangle class as abstract since it is carrying around unimplemented abstract methods from Shape.
+## Abstract Class vs class vs subclass 
+-Imagine if Shape had a whopping 20 abstract methods, and our humble rectangle only wanted to tackle 5 of them. You would declare the rectangle as abstract and have pushed the task of implementing the remaining 15 methods down the line to any class that extends the rectangle.
+-To make things right and implement that inherited abstract method in the rectangle, simply add it to the class. If you are using IntelliJ, it is quite simple. Right-click, select "generate", and choose "implement methods". This handy feature lets you pick from the inherited abstract methods you need to tackle. In this case, it is "calculate area".
+# Creating Objects With Abstract Types
+-Abstract classes cannot be turned into objects, but you can use them as types, provided you make an instance of their non-abstract subclasses, like "rectangle".
+-Just give it length and width. Now, let's do "rectangle.calculateArea" and print it. Even though "rectangle" is of type "shape" and "shape" has its own "calculateArea" method, the one in "rectangle" takes over because it is customized. 35 is what we get, thanks to "rectangle" multiplying length by width.
+-You cannot create an instance of an abstract class; they are just for inheritance. Nice job sticking with it, and do not worry if you need to revisit abstract concepts. It is all part of the learning process.
+# Interfaces 
+-An interface is like an abstract class, a blueprint for an abstract idea, but interfaces are super abstract. They do not have any state, no constructors, and you cannot change the values of their fields. Classes implement interfaces rather than extending them. 
+-Even though interfaces might seem simple, they are super useful in Java. They help with abstraction, polymorphism, and multiple inheritance.
+## Implementing Interfaces
+-When you are dealing with interfaces in Java, it is like signing a contract. Imagine we have this "Book" class and we want it to follow the rules of the "Product" interface. Unlike classes, interfaces do not use "extends" to connect with others; they use "implements." This indicates to the Book class that you must implement the Product interface.
+-Remember, in Java, a class can only inherit from one class (that is  the "extends" rule), but it can implement multiple interfaces. That is like being part of multiple clubs. To do this, you just list the interfaces, separated by commas, in the class header.
+# Instantiating Objects With Interface Types
+-You do not have to use the interface to declare objects, but it is handy if you want your object to be polymorphic, meaning it can take on different forms depending on what class it is working with.
+-In the book class, we have the product interface. Now, let's get practical and create a book object. We are going to try to make a "book" interface. 
+-But hold on, there is a roadblock. We are hit with an error message telling us we cannot make a product object like that. This is similar to what happens with abstract classes; you cannot just create them out of thin air.
+-There is a workaround. We cannot make a product, but we can use any class that implements it. Let's use "book" for that. Now, give your book a name. Do that by using the "setName" method from the book class. Something like this: "book.setName" and then name the book "In the Kitchen with H+ Sport."
+## Default and Static Methods
+-Interfaces in programming are not just about abstract methods; they can also house default and static methods, which are a bit different. Think of it like this: imagine we have a "Product" interface for products with methods to set and get the product name. Then there is a "Book" class that implements this interface.
+-Now, we realize all products should also have a price. So, we add methods to get and set the price, but these methods need to be public and abstract by default. 
+-Now, if we add these new methods as they are, it breaks any non-abstract class that uses the Product interface. To avoid this, we can make these new methods "default". Default methods provide a default implementation, so classes that already implemented the interface will not break. You mark them with the word "default" at the start and give them a body.
+- Default methods become available to all classes that use the interface. If you do not want a book's price to be zero by default, set a different default value, to something like 50.
+- -Default methods are great because they provide implementation, but they are not set in stone. Implementing classes can override them if needed.
+- Remember, interfaces cannot be made into objects. They are implemented by classes and can also extend other interfaces. 
+-Any class that uses an interface must implement its methods or declare itself abstract. By default, interface methods are public and abstract. In addition to abstract methods, interfaces can contain default and static methods.
+# Data Structures
