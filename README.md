@@ -352,4 +352,4 @@ Java by automatically generating standard methods such as constructors, accessor
 - -Default methods are great because they provide implementation, but they are not set in stone. Implementing classes can override them if needed.
 - Remember, interfaces cannot be made into objects. They are implemented by classes and can also extend other interfaces. 
 -Any class that uses an interface must implement its methods or declare itself abstract. By default, interface methods are public and abstract. In addition to abstract methods, interfaces can contain default and static methods.
-# Data Structures
+# Data Structures in Java
