@@ -8,7 +8,7 @@
 # Algorithms in Programming 
 -In programming an algorithm is a step-by-step procedure or formula for solving a problem or performing task.
 -An algorithm is a finite sequence of well-defomed instructions,typically to solve a class of problems or perform a computation.
-# Getting Your Java Environment Ready
+# Getting Your Java Environment Ready.
 -The Java Development Kit (JDK) is required for developing Java applications. 
 -It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and other tools needed for Java development.
 -Download and Install the JDK
